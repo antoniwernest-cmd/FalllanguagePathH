@@ -1,0 +1,9 @@
+Fall Language Path 1 — five themed learning days
+
+Open index.html in a current web browser. Choose Entry Way, Excite, Inspire,
+or Explorer, then choose Monday Aquarium, Tuesday Bike Ride, Wednesday Tractors,
+Thursday Boating, or Friday Cave Explore.
+
+Each day is one scrollable page with 12 numbered activities, a glossary, slow
+recorded narration, saved attempts, and a downloadable assessment PDF. Keep
+this folder together so the day pages can load their recordings and scripts.

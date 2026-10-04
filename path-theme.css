@@ -1,0 +1,84 @@
+/* One consistent, readable colour identity for each learning path. */
+[data-path="entry-way"]{--path-accent:#873c20;--path-hover:#6b2e18;--path-border:#cf937a;--path-soft:#fff0e7;--path-surface:#ffe1d0;--path-bg:#fff0e7;--path-bg2:#fffaf4;--path-ink:#4d271b}
+[data-path="excite"]{--path-accent:#76530e;--path-hover:#604209;--path-border:#c7ab59;--path-soft:#fff4d1;--path-surface:#ffe7ab;--path-bg:#fff3d6;--path-bg2:#fffdf0;--path-ink:#45320e}
+[data-path="inspire"]{--path-accent:#145e75;--path-hover:#104a5d;--path-border:#85b7c2;--path-soft:#e6f5f8;--path-surface:#d5edf1;--path-bg:#e5f5f7;--path-bg2:#f8fdfd;--path-ink:#173e4a}
+[data-path="explorer"]{--path-accent:#543b78;--path-hover:#41305d;--path-border:#af9bcd;--path-soft:#f1eafa;--path-surface:#e3d8f3;--path-bg:#f0eafa;--path-bg2:#fcf9ff;--path-ink:#382b4d}
+
+/* The home picker gives each path a clear colour without colouring the whole menu. */
+.group[data-path]{background:var(--path-soft);border-color:var(--path-border)}
+.group[data-path] .group-toggle{background:var(--path-accent);color:#fff}
+.group[data-path] .group-toggle:hover{background:var(--path-hover)}
+.group[data-path] .group-toggle small,.group[data-path] .group-toggle .arrow{color:#fff}
+.group[data-path] .day-grid a{background:#fff;border-color:var(--path-border);color:var(--path-ink);box-shadow:inset 0 5px var(--path-accent)}
+.group[data-path] .day-grid a:hover{background:var(--path-surface)}
+.group[data-path] .day-grid small{color:var(--path-ink)}
+
+/* Each themed day keeps the same path colour from its heading to its answers. */
+body[data-path]{background:linear-gradient(155deg,var(--path-bg),var(--path-bg2)) fixed}
+body[data-path] .hero{background:linear-gradient(125deg,#fff,var(--path-surface));border-color:var(--path-border)}
+body[data-path] .activity:not(.completed),body[data-path] .overview{border-color:var(--path-border)}
+body[data-path] .activity .number,body[data-path] .eyebrow,body[data-path] .top-link{color:var(--path-accent)}
+body[data-path] .theme-intro,body[data-path] .passage,body[data-path] .story{border-left-color:var(--path-accent)}
+body[data-path] .expectation,body[data-path] .ref{background:var(--path-soft);color:var(--path-accent)}
+body[data-path] .progress>div,body[data-path] .meter div{background:var(--path-accent)}
+body[data-path] .day-link.current,body[data-path] .next{background:var(--path-accent);border-color:var(--path-accent);color:#fff}
+body[data-path] .day-link:not(.current),body[data-path] .overview a,body[data-path] .bottom-nav a,body[data-path] .back,body[data-path] .link{background:#fff;border-color:var(--path-border);color:var(--path-accent)}
+body[data-path] .hear,body[data-path] .controls button,body[data-path] .report-controls button,body[data-path] .answer-help,body[data-path] .check,body[data-path] .undo{background:var(--path-accent);border-color:var(--path-accent);color:#fff}
+body[data-path] .hear:hover,body[data-path] .controls button:hover,body[data-path] .report-controls button:hover,body[data-path] .answer-help:hover,body[data-path] .check:hover,body[data-path] .undo:hover,body[data-path] .next:hover{background:var(--path-hover);color:#fff}
+body[data-path] .option:not(.correct):not(.incorrect),body[data-path] .tile,body[data-path] .cloze-option{background:var(--path-soft);border-color:var(--path-border);color:var(--path-ink)}
+body[data-path] .option:not(.correct):not(.incorrect):hover,body[data-path] .tile:hover,body[data-path] .cloze-option:hover{background:var(--path-surface)}
+body[data-path] .cloze-blank,body[data-path] .picture-board{border-color:var(--path-accent)}
+body[data-path] .cloze-option[aria-pressed=true]{background:var(--path-surface)}
+body[data-path] .question{background:var(--path-soft);border-color:var(--path-border)}
+
+/* Only Fall Language Path 1 themed days use the full viewport. */
+body.white-daily-page main{width:100%;max-width:none;margin:0;padding:16px clamp(12px,2vw,36px) 70px}
+body.white-daily-page .day-nav{display:grid;grid-template-columns:repeat(5,minmax(0,1fr))}
+body.white-daily-page .day-link{text-align:center}
+body.white-daily-page .overview nav{display:grid;grid-template-columns:repeat(4,minmax(0,1fr))}
+body.white-daily-page .overview a{text-align:center}
+body.white-daily-page .overview-layout{display:grid;grid-template-columns:minmax(0,1fr) minmax(235px,300px);gap:18px;align-items:start}
+body.white-daily-page .mini-glossary{background:var(--path-soft);border:2px solid var(--path-border);border-radius:15px;padding:12px 15px;color:var(--path-ink)}
+body.white-daily-page .mini-glossary h3{font-size:1rem;line-height:1.25;margin:0 0 8px;color:var(--path-accent)}
+body.white-daily-page .mini-glossary dl{margin:0}
+body.white-daily-page .glossary-entry{padding:6px 0;border-top:1px solid var(--path-border)}
+body.white-daily-page .glossary-entry dt{font-size:.98rem;line-height:1.25;font-weight:850}
+body.white-daily-page .glossary-entry dd{font-size:.86rem;line-height:1.4;margin:2px 0 0 25px}
+body.white-daily-page .glossary-hear{font-size:.85rem;line-height:1.2;padding:7px 10px;margin-top:9px}
+@media(max-width:900px){body.white-daily-page .overview-layout{grid-template-columns:1fr}body.white-daily-page .mini-glossary{max-width:100%}}
+@media(max-width:1050px){body.white-daily-page .day-nav{grid-template-columns:repeat(3,minmax(0,1fr))}body.white-daily-page .overview nav{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:700px){body.white-daily-page .day-nav,body.white-daily-page .overview nav{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:640px){body.white-daily-page main{padding:10px 12px 55px}}
+@media(max-width:440px){body.white-daily-page .day-nav,body.white-daily-page .overview nav{grid-template-columns:1fr}}
+
+/* Large, separate picture cues on each of the five themed days. */
+body.white-daily-page .activity-emoji{flex:none;min-width:1.1em;text-align:center;font-size:clamp(5.5rem,7vw,7rem);line-height:1.05}
+body.white-daily-page .day-link{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:4px}
+body.white-daily-page .day-icon{display:block;font-size:3.7rem;line-height:1.1}
+body.white-daily-page .overview a{display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:96px}
+body.white-daily-page .jump-icon{display:block;font-size:3.2rem;line-height:1.1;margin-bottom:3px}
+body.white-daily-page .cloze-option{display:inline-flex;align-items:center;gap:8px}
+body.white-daily-page .cloze-icon{font-size:3rem;line-height:1.1}
+body.white-daily-page .option-art{display:inline-block;font-size:3.2rem;line-height:1.1;vertical-align:middle;margin-right:6px}
+body.white-daily-page .display .option-art{font-size:4.2rem;margin-right:10px}
+body.white-daily-page .picture-row{font-size:4.5rem}
+@media(max-width:640px){body.white-daily-page .activity-emoji{font-size:4.9rem}body.white-daily-page .day-icon{font-size:3rem}body.white-daily-page .jump-icon{font-size:2.8rem}body.white-daily-page .cloze-icon{font-size:2.7rem}body.white-daily-page .option-art{font-size:2.9rem}body.white-daily-page .display .option-art{font-size:3.7rem}body.white-daily-page .picture-row{font-size:3.7rem}}
+
+/* The activity library uses the same colours on its path choices and questions. */
+.level[data-path]{background:var(--path-accent);border-color:var(--path-accent);color:#fff}
+.level[data-path]:hover{background:var(--path-hover)}
+body[data-path] .panel{border-color:var(--path-border)}
+
+/* Earlier story missions keep the chosen path colour as well. */
+.level-button[data-path]{background:var(--path-accent);border-color:var(--path-accent);color:#fff}
+.level-button[data-path]:hover{background:var(--path-hover);color:#fff}
+body[data-path] .set-grid button,body[data-path] .choice-grid button,body[data-path] .match-bank button,body[data-path] .warmup-tile,body[data-path] .build-tiles button{background:var(--path-soft);border-color:var(--path-border);color:var(--path-ink)}
+body[data-path] .set-grid button:hover,body[data-path] .choice-grid button:hover,body[data-path] .match-bank button:hover,body[data-path] .warmup-tile:hover,body[data-path] .build-tiles button:hover{background:var(--path-surface)}
+body[data-path] button[aria-pressed=true],body[data-path] button.selected{background:var(--path-accent);border-color:var(--path-accent);color:#fff}
+body[data-path] .tag,body[data-path] .numbered-question{background:var(--path-soft);border-color:var(--path-border)}
+body[data-path] .question-number,body[data-path] .activity-number{background:var(--path-accent);color:#fff}
+body[data-path] .passage{background:#fff;border-left-color:var(--path-accent)}
+
+/* A dark focus ring stays visible against every pale and saturated palette. */
+body[data-path] button:focus-visible,body[data-path] a:focus-visible,body[data-path] textarea:focus-visible,body[data-path] select:focus-visible,
+.group[data-path] button:focus-visible,.group[data-path] a:focus-visible,.level[data-path]:focus-visible,.level-button[data-path]:focus-visible{outline:4px solid #172b40;outline-offset:3px}
